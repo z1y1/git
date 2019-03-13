@@ -32,8 +32,8 @@ class PPO:
         pi, pi_params = self._build_anet('pi', trainable=True)
         oldpi, oldpi_params = self._build_anet('oldpi', trainable=False)
         with tf.variable_scope('sample_action'):
-            # self.sample_op = tf.squeeze(pi.sample(1), axis=0)
-            self.sample_op = pi.sample(1)
+            self.sample_op = tf.squeeze(pi.sample(1), axis=0)
+            # self.sample_op = pi.sample(1)
         with tf.variable_scope('update_oldpi'):
             self.update_oldpi_op = [oldp.assign(p) for p, oldp in zip(pi_params, oldpi_params)]
 
