@@ -1,0 +1,21 @@
+git仓库初始化：git init
+添加文件到暂存区：git add
+添加文件到版本库：git commit -m '备注'
+查看仓库信息：git status
+查看工作区和暂存区区别：git diff
+查看工作区和版本库区别：git diff HEAD -- file
+查看历史记录：git log or git reflog
+返回上一个版本号：git reset --hard HEAD^(版本号)
+返回上上一个版本号：git reset --hard HEAD^^
+文件恢复到暂存区的文件：git checkout -- file
+git reset HEAD <file>
+生成本电脑的私钥和公钥：ssh-keygen -t rsa -C 'youremail@example.com'
+本地仓库和远程链接：git remote add origin git@github.com:(远程参考名字)
+内容推送到远程库：git push -u origin branchname
+github删除分支：git push origin --delete branchname
+克隆：git clone
+（创建并切换分支：git checkout -b  branchname）
+创建分支：git branch branchname
+切换分支：git checkout branchname
+合并分支：git merge branchname
+删除分支：git branch -d branchname
